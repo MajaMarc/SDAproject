@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Projekt SDA</name>
+		<description>Każda osoba ma swój zestaw testów.</description>
+										<sections>
+		<section>
+		<name>Projekt : Maja Marcinkowska</name>
+		<description>https://automationintesting.online/</description>
+										<sections>
+		<section>
+		<name>Nagłówek strony</name>
+		<description>„Welcome to Restful Booker Platform”
+-&amp;gt;Składa się z 4 sekcji – Exploration, Automation, Infrastructure, Get Started
+-&amp;gt;Poszczególne sekcje zawierają tekst oraz linki do repozytorium z kodem źródłowym strony, a także linki do strony głównej, panelu admina, repozytorium z funkcjami oraz miejsca do zgłaszania błędów
+-&amp;gt;Na końcu nagłówka znajduje się przycisk „Let me hack!”</description>
+						<cases>
+												<case>
+				<id>C261</id>
+				<title>Sprawdzenie hiperłącza w sekcji Automation</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze nagłówka
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na hiperłącze zamieszczone w tekście &quot;restful-booker-platform source code&quot; w sekcji Automation</content><expected>1. Użytkownik zostaje przekierowany na stronę https://github.com/mwinteringham/restful-booker-platform
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C262</id>
+				<title>Sprawdzenie drugiego hiperłącza w sekcji Infrastructure</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze nagłówka
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na hiperłącze zamieszczone w tekście &quot;build process in this public build pipeline&quot; w sekcji Infrastructure
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://circleci.com/gh/mwinteringham/workflows/restful-booker-platform</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C263</id>
+				<title>Sprawdzenie hiperłącza home page w sekcji Get Started</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze nagłówka
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na hiperłącze zamieszczone w tekście &quot;home page&quot; w sekcji Get Started</content><expected>1. Użytkownik zostaje przekierowany na stronę gł&amp;oacute;wną https://automationintesting.online/</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C264</id>
+				<title>Sprawdzenie hiperłącza admin panel w sekcji Get Started oraz zalogowanie się</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>360</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze nagłówka
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na hiperłącze zamieszczone w tekście &quot;admin panel&quot; w sekcji Get Started
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://automationintesting.online/#/admin</expected></step>
+<step>
+<index>2</index><content>1. Użytkownik uzupełnia pole Username poprawnymi danymi wpisując &quot;admin&quot;
+2. Użytkownik uzupełnia pole Password wpisując błędne hasło, tj. &quot;haslo123&quot;
+3. Użytkownik klika przycisk &quot;Login&quot;</content><expected>1. Pola podświetlają się na czerwono
+2. Użytkownik nie zostaje zalogowany</expected></step>
+<step>
+<index>3</index><content>1. Użytkownik uzupełnia pole Username niepoprawnymi danymi, tj. &quot;user&quot;
+2. Użytkownik uzupełnia pole Password wpisując poprawne hasło, tj. &quot;password&quot;
+3. Użytkownik klika przycisk &quot;Login&quot;</content><expected>1. Pola podświetlają się na czerwono
+2. Użytkownik nie zostaje zalogowany</expected></step>
+<step>
+<index>4</index><content>1. Użytkownik uzupełnia pole Username poprawnymi danymi, tj. &quot;admin&quot;
+2. Użytkownik uzupełnia pole Password wpisując poprawne hasło, tj. &quot;password&quot;
+3. Użytkownik klika przycisk &quot;Login&quot;</content><expected>1. Użytkownik zostaje zalogowany
+2. Użytkownik znajduje się w obszarze do zarządzania pokojami &quot;B&amp;amp;B Booking Management&quot;
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C265</id>
+				<title>Sprawdzenie hiperłącza dot. features w sekcji Get Started</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze nagłówka
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na hiperłącze zamieszczone w tekście &quot;read more about the features here&quot; w sekcji Get Started
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://github.com/mwinteringham/restful-booker-platform/projects/1</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C266</id>
+				<title>Sprawdzenie hiperłącza dot. bad bag w sekcji Get Started</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze nagłówka
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na hiperłącze zamieszczone w tekście &quot;feel free to raise it here&quot; w sekcji Get Started
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://github.com/mwinteringham/restful-booker-platform/issues</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C267</id>
+				<title>Sprawdzenie przycisku &quot;Let me hack!&quot;</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze nagłówka
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na przycisk &quot;Let me hack!&quot;</content><expected>Brak dostatecznej dokumentacji na temat funkcjonalności przycisku &quot;Let me hack!&quot;. Nie jest jasne czym ta akcja na skutkować.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Rezerwacja pokoju</name>
+		<description>Kontener pierwszy - Rooms
+-&amp;gt;Składa się z tekstu oraz przycisku „Book this room”</description>
+						<cases>
+												<case>
+				<id>C268</id>
+				<title>Sprawdzenie przycisku &quot;Book this room&quot;</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze &quot;Rooms&quot;
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na przycisk &quot;Book this room&quot;</content><expected>1. Użytkownikowi wyświetlony zostaje kalendarz z przyciskami &quot;Today&quot;, &quot;Back&quot;, &quot;Next&quot;
+2. Użytkownikowi wyświetlony zostaje formularz kontaktowy z polami na wpisanie Firstname, Lastname, Email i Phone oraz z przyciskami &quot;Book&quot; i &quot;Cancel&quot;
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C269</id>
+				<title>Wybranie okresu wynajmu pokoju w kalendarzu na przyszłe dni</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze &quot;Rooms&quot;
+4. Użytkownik kliknął przycisk &quot;Book this room&quot; 
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik wybiera dzień rozpoczęcia wynajmu pokoju, z zachowaniem odstępu min. 24h od daty obecnej.
+2. Użytkownik wybiera dzień zakończenia wynajmu oddzielony od daty rozpoczęcia o dwa dni - łącznie wynajem pokoju ma trwać 3 doby, np. od 10 do 13 grudnia 2023 r.
+</content><expected>1. Po zaznaczeniu daty początkowej i daty końcowej, na kalendarzu zaznaczają się wszystkie dni pomiędzy tymi datami.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C270</id>
+				<title>Wybranie okresu wynajmu pokoju w terminie oznaczonym jako &quot;Unavailable&quot;</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze &quot;Rooms&quot;
+4. Użytkownik kliknął przycisk &quot;Book this room&quot; 
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik wybiera daty wynajęcia pokoju, kt&amp;oacute;re zawierają się w datach oznaczonych jako &quot;Unavailable&quot;
+2. Użytkownik wypełnia formularz poprawnymi danymi.
+3. Użytkownik klika przycisk &quot;Book&quot;.</content><expected>1. Użytkownik nie może zarezerwować pokoju na wybrane daty.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C271</id>
+				<title>Wypełnienie formularza rezerwacyjnego</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze &quot;Rooms&quot;
+4. Użytkownik kliknął przycisk &quot;Book this room&quot;
+5. Użytkownik wybrał okres wynajęcia pokoju
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Stosując poprawny zapis, do pola Firstname użytkownik wpisuje &quot;James&quot; 
+2. Stosując poprawny zapis, do pola Lastname użytkownik wpisuje &quot;Dean&quot;
+3. Stosując poprawny zapis, do pola Email użytkownik wpisuje &quot;james@email.com&quot;
+4. Stosując niepoprawny zapis, do pola Phone użytkownik wpisuje &quot;111222333&quot;
+5. Użytkownik naciska przycisk &quot;Book&quot;</content><expected>1. Użytkownikowi wyświetla się wiadomość, że pole musi zawierać od 11 do 21 znak&amp;oacute;w
+2. Użytkownik nie może zarezerwować pokoju</expected></step>
+<step>
+<index>2</index><content>1. Stosując poprawny zapis, do pola Firstname użytkownik wpisuje &quot;James&quot; 
+2. Stosując poprawny zapis, do pola Lastname użytkownik wpisuje &quot;Dean&quot;
+3. Stosując niepoprawny zapis, do pola Email użytkownik wpisuje &quot;james#email.com&quot;
+4. Stosując poprawny zapis, do pola Phone użytkownik wpisuje &quot;01402 619211&quot;
+5. Użytkownik naciska przycisk &quot;Book&quot;
+</content><expected>1. Użytkownikowi wyświetla się wiadomość o niepoprawnym adresie email
+2. Użytkownik nie może zarezerwować pokoju
+</expected></step>
+<step>
+<index>3</index><content>1. Stosując poprawny zapis, do pola Firstname użytkownik wpisuje &quot;James&quot; 
+2. Pole Lastname użytkownik pozostawia puste
+3. Stosując poprawny zapis, do pola Email użytkownik wpisuje &quot;james@email.com&quot;
+4. Stosując poprawny zapis, do pola Phone użytkownik wpisuje &quot;01402 619211&quot;
+5. Użytkownik naciska przycisk &quot;Book&quot;
+</content><expected>1. Użytkownikowi wyświetla się wiadomość, że pole Lastname nie może być puste
+2. Użytkownik nie może zarezerwować pokoju</expected></step>
+<step>
+<index>4</index><content>1. Pole Firstname użytkownik pozostawia puste
+2. Stosując poprawny zapis, do pola Lastname użytkownik wpisuje &quot;Dean&quot;
+3. Stosując poprawny zapis, do pola Email użytkownik wpisuje &quot;james@email.com&quot;
+4. Stosując poprawny zapis, do pola Phone użytkownik wpisuje &quot;01402 619211&quot;
+5. Użytkownik naciska przycisk &quot;Book&quot;
+</content><expected>1. Użytkownikowi wyświetla się wiadomość, że pole Firstname nie może być puste
+2. Użytkownik nie może zarezerwować pokoju</expected></step>
+<step>
+<index>5</index><content>1. Stosując poprawny zapis, do pola Firstname użytkownik wpisuje &quot;James&quot; 
+2. Stosując poprawny zapis, do pola Lastname użytkownik wpisuje &quot;Dean&quot;
+3. Stosując poprawny zapis, do pola Email użytkownik wpisuje &quot;james@email.com&quot;
+4. Stosując poprawny zapis, do pola Phone użytkownik wpisuje &quot;01402 619211&quot;
+5. Użytkownik naciska przycisk &quot;Book&quot;
+</content><expected>1. Użytkownikowi wyświetla się informacja o prawidłowej rezerwacji pokoju
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C272</id>
+				<title>Rezerwacja pokoju na przyszłe dni w aktualnym miesiącu</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>360</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze &quot;Rooms&quot;
+4. Użytkownik kliknął przycisk &quot;Book this room&quot; 
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik wybiera dzień rozpoczęcia wynajmu pokoju w bieżącym miesiącu, z zachowaniem odstępu min. 24h od daty obecnej.
+2. Użytkownik wybiera dzień zakończenia wynajmu oddzielony od daty rozpoczęcia o dwa dni - łącznie wynajem pokoju ma trwać 3 doby, np. od 10 do 13 grudnia 2023 r.
+</content><expected>1. Po zaznaczeniu daty początkowej i daty końcowej, na kalendarzu zaznaczają się wszystkie dni pomiędzy tymi datami.</expected></step>
+<step>
+<index>2</index><content>1. Stosując poprawny zapis, do pola Firstname użytkownik wpisuje &quot;James&quot;
+2. Stosując poprawny zapis, do pola Lastname użytkownik wpisuje &quot;Dean&quot;
+3. Stosując poprawny zapis, do pola Email użytkownik wpisuje &quot;james@email.com&quot;
+4. Stosując poprawny zapis, do pola Phone użytkownik wpisuje &quot;01402 619211&quot;
+5. Użytkownik naciska przycisk &quot;Book&quot;</content><expected>1. Użytkownikowi wyświetla się informacja o prawidłowej rezerwacji pokoju.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C273</id>
+				<title>Rezerwacja pokoju w miesiącu ubiegłym</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze &quot;Rooms&quot;
+4. Użytkownik kliknął przycisk &quot;Book this room&quot; 
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na przycisk &quot;Back&quot;
+2. Użytkownik wybiera daty wynajęcia pokoju w miesiącu przeszłym
+3. Użytkownik poprawnie wypełnia formularz, wpisując następujące dane: Firstname: &quot;James&quot;, Lastname: &quot;Dean&quot;, Email:&quot;james@email.com&quot;, Phone: &quot;01402 619211&quot;
+4. Użytkownik naciska przycisk &quot;Book&quot;</content><expected>1. Użytkownik nie może zarezerwować pokoju</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C274</id>
+				<title>Rezerwacja pokoju na przyszły miesiąc</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze &quot;Rooms&quot;
+4. Użytkownik kliknął przycisk &quot;Book this room&quot; 
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na przycisk &quot;Next&quot;
+2. Użytkownik wybiera daty wynajęcia pokoju w miesiącu przyszłym
+3. Użytkownik poprawnie wypełnia formularz, wpisując następujące dane: Firstname: &quot;James&quot;, Lastname: &quot;Dean&quot;, Email:&quot;james@email.com&quot;, Phone: &quot;01402 619211&quot;
+4. Użytkownik naciska przycisk &quot;Book&quot;
+</content><expected>1. Użytkownikowi wyświetla się informacja o prawidłowej rezerwacji pokoju
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C275</id>
+				<title>Rezygnacja z próby rezerwacji pokoju</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze &quot;Rooms&quot;
+4. Użytkownik kliknął przycisk &quot;Book this room&quot; 
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik wybiera możliwe do zarezerwowania daty wynajęcia pokoju 
+3. Użytkownik poprawnie wypełnia formularz, wpisując następujące dane: Firstname: &quot;James&quot;, Lastname: &quot;Dean&quot;, Email:&quot;james@email.com&quot;, Phone: &quot;01402 619211&quot;
+3. Użytkownik naciska przycisk &quot;Cancel&quot;
+</content><expected>1. Dane wprowadzone przez użytkownika zostają wykasowane
+2. Użytkownik zostaje cofnięty do widoku &quot;Rooms&quot; z widocznym  przyciskiem  &quot;Book this room&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Formularz kontaktowy</name>
+		<description>Kontener drugi - Formularz kontaktowy
+-&amp;gt;Składa się z tekstu, formularza kontaktowego i przycisku „Submit”
+-&amp;gt;Formularz kontaktowy składa się z 5 pól do wypełnienia: 1. Name, 2. Email, 3. Phone, 4. Subject, 5. Message</description>
+						<cases>
+												<case>
+				<id>C276</id>
+				<title>Wypełnienie formularza kontaktowego poprawnymi danymi i wysłanie wiadomości</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>360</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Formularza kontaktowego
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Poprawnymi danymi użytkownik wypełnia pola: Name: &quot;James Dean&quot;, Email: &quot;james@email.com&quot;, Phone: &quot;01402 619211&quot;
+2. Użytkownik wpisuje temat wiadomości w polu &quot;Subject&quot;, np. &quot;Booking&quot;
+3. Użytkownik wpisuje wiadomość w polu &quot;Message&quot;, np. &quot;Message message message message message message message message message message message message message&quot;
+4. Użytkownik klika przycisk &quot;Submit&quot;</content><expected>1. Pojawia się komunikat z podziękowaniami za wysłanie wiadomości
+2. Wiadomość zostaje wysłana</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C277</id>
+				<title>Wysłanie wiadomości poprzez formularz kontaktowy podając niewłaściwy adres email</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>360</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Formularza kontaktowego
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Poprawnymi danymi użytkownik wypełnia pola: Name: &quot;James Dean&quot;, Phone: &quot;01402 619211&quot;
+2. W polu &quot;Email&quot; użytkownik wpisuje niepoprawny adres email &quot;james#email.com&quot;
+3. Użytkownik wpisuje temat wiadomości w polu &quot;Subject&quot;, np. &quot;Booking&quot;
+4. Użytkownik wpisuje wiadomość w polu &quot;Message&quot;, np. &quot;Message message message message message message message message message message message message message&quot;
+5. Użytkownik klika przycisk &quot;Submit&quot;
+
+
+</content><expected>1. Pojawia się komunikat o niepoprawnym adresie email
+2. Wiadomość nie zostaje wysłana</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C278</id>
+				<title>Wysłanie wiadomości poprzez formularz kontaktowy bez podania tematu</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>360</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Formularza kontaktowego
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Poprawnymi danymi użytkownik wypełnia pola: Name: &quot;James Dean&quot;, Email: &quot;james@email.com&quot;, Phone: &quot;01402 619211&quot;
+2. Pole &quot;Subject&quot; użytkownik pozostawia puste
+3. Użytkownik wpisuje wiadomość w polu &quot;Message&quot;, np. &quot;Message message message message message message message message message message message message message&quot;
+4. Użytkownik klika przycisk &quot;Submit&quot;
+
+</content><expected>1. Pojawia się komunikat &quot;Subject may not be blank&quot; oraz &quot;Subject must be between 5 and 100 characters.&quot;
+2. Wiadomość nie zostaje wysłana</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C279</id>
+				<title>Wysłanie wiadomości poprzez formularz kontaktowy bez wypełnienia pola &quot;Message&quot;</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Formularza kontaktowego
+
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Poprawnymi danymi użytkownik wypełnia pola: Name: &quot;James Dean&quot;, Email: &quot;james@email.com&quot;, Phone: &quot;01402 619211&quot;
+2. Użytkownik wpisuje temat wiadomości w polu &quot;Subject&quot;, np. &quot;Booking&quot;
+3. Pole &quot;Message&quot; użytkownik pozostawia puste
+4. Użytkownik klika przycisk &quot;Submit&quot;
+
+
+</content><expected>1. Pojawia się komunikat &quot;Message may not be blank&quot; oraz &quot;Message must be between 20 and 2000 characters.&quot;
+2. Wiadomość nie zostaje wysłana
+
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Mapa z lokalizacją</name>
+		<description>Kontener trzeci - Mapa
+-&amp;gt;Składa się z mapy, pinezki, a w prawym, dolnym rogu znajdują się teksty z hiperłączem</description>
+						<cases>
+												<case>
+				<id>C280</id>
+				<title>Sprawdzenie lokalizacji obiektu</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na pinezkę widoczną na mapie</content><expected>1. Po kliknięciu na pinezkę wyświetla się adres</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C281</id>
+				<title>Oddalenie lokalizacji na mapie w przeglądarce desktopowej</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę desktopową Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Po najechaniu na mapę użytkownik używa pokrętła myszy wykonując ruch do siebie</content><expected>1. Mapa się oddala ukazując większy obszar</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C282</id>
+				<title>Oddalenie lokalizacji na mapie w przeglądarce na Android</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome na Android
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Po najechaniu na mapę użytkownik wykonuje ruch uszczypnięcia ekranu dwoma palcami
+</content><expected>1. Mapa się oddala ukazując większy obszar</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C283</id>
+				<title>Przybliżenie lokalizacji na mapie  w przeglądarce desktopowej</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę desktopową Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Po najechaniu na mapę użytkownik używa pokrętła myszy wykonując ruch oddalający od siebie
+</content><expected>1. Mapa się przybliża ukazując bardziej szczeg&amp;oacute;łowy obraz lokalizacji</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C284</id>
+				<title>Przybliżenie lokalizacji na mapie w przeglądarce na Android</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome na Android
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Po najechaniu na mapę użytkownik wykonuje ruch przeciwny do ruchu uszczypnięcia ekranu dwoma palcami
+</content><expected>1. Mapa się przybliża ukazując bardziej szczeg&amp;oacute;łowy obraz lokalizacji</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C285</id>
+				<title>Poruszanie się po mapie  w przeglądarce desktopowej</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę desktopową Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika lewym przyciskiem myszy na dowolny obszar mapy i przeciąga kursor w prawo.
+2. Użytkownik klika lewym przyciskiem myszy na dowolny obszar mapy i przeciąga kursor w lewo.
+3. Użytkownik klika lewym przyciskiem myszy na dowolny obszar mapy i przeciąga kursor w g&amp;oacute;rę.
+4. Użytkownik klika lewym przyciskiem myszy na dowolny obszar mapy i przeciąga kursor w d&amp;oacute;ł.</content><expected>1. Mapa przesuwa się zgodnie z wykonywanymi ruchami.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C286</id>
+				<title>Poruszanie się po mapie w przeglądarce na Android</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome na Android
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik przykłada dwa palce do ekranu na dowolny obszar mapy i wykonuje ruch w prawo.
+2. Użytkownik przykłada dwa palce do ekranu na dowolny obszar mapy i wykonuje ruch w lewo.
+3. Użytkownik przykłada dwa palce do ekranu na dowolny obszar mapy i wykonuje ruch w g&amp;oacute;rę.
+4. Użytkownik przykłada dwa palce do ekranu na dowolny obszar mapy i wykonuje ruch w d&amp;oacute;ł.</content><expected>1. Mapa przesuwa się zgodnie z wykonywanymi ruchami.
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C287</id>
+				<title>Otwarcie mapy poprzez hiperłącze</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na tekst &quot;Pigeon&quot; w prawym dolnym rogu mapy</content><expected>1. Użytkownik zostaje przekierowany na stronę https://pigeon-maps.js.org/</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C288</id>
+				<title>Otwarcie hiperłącza dot. współtwórców mapy</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Mapy
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na tekst &quot;OpenStreetMap&quot; w prawym dolnym rogu mapy</content><expected>1. Użytkownik zostaje przekierowany na stronę https://www.openstreetmap.org/copyright</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Stopka</name>
+		<description>-&amp;gt;Składa się z tekstu oraz hiperłączy przekierowujących do: blogów osób, które stworzyły stronę, polityki cookies, polityki prywatności, panelu admina oraz do bloga AUTOMATION IN TESTING</description>
+						<cases>
+												<case>
+				<id>C289</id>
+				<title>Otwarcie hiperłącza do bloga &quot;Mark Winteringham&quot;</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Stopki
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na tekst &quot;Mark Winteringham&quot;
+</content><expected>1. Użytkownik zostaje przekierowany na stronę http://www.mwtestconsultancy.co.uk/
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C290</id>
+				<title>Otwarcie hiperłącza do bloga &quot;Richard Bradshaw&quot;</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Stopki
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na tekst &quot;Richard Bradshaw&quot;
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://thefriendlytester.co.uk/
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C291</id>
+				<title>Otwarcie hiperłącza do polityki cookies</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Stopki
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na tekst &quot;Cookie-Policy&quot;
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://automationintesting.online/#/cookie
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C292</id>
+				<title>Otwarcie hiperłącza do polityki prywatności</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Stopki
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na tekst &quot;Privacy-Policy&quot;
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://automationintesting.online/#/cookie
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C293</id>
+				<title>Otwarcie hiperłącza do panelu admina</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Stopki
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na tekst &quot;Admin panel&quot;
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://automationintesting.online/#/admin
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C294</id>
+				<title>Otwarcie hiperłącza do bloga &quot;Automation in Testing&quot;</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Użytkownik uruchamia przeglądarkę Chrome
+2. Użytkownik wchodzi na stronę https://automationintesting.online/
+3. Użytkownik znajduje się w obszarze Stopki
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>1. Użytkownik klika na tekst &quot;Automation in Testing&quot;
+</content><expected>1. Użytkownik zostaje przekierowany na stronę https://automationintesting.com/</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+	</sections>
+			</section>
+			<section>
+		<name>Wysyłka CSV i walidowanie pliku</name>
+		<description></description>
+									</section>
+	</sections>
+</suite>
