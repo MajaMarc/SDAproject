@@ -1,0 +1,243 @@
+{
+  "id": "3a932b4d-17d1-4924-8fc3-22bb266dc640",
+  "version": "2.0",
+  "name": "Restful Booker Platform - SDA project",
+  "url": "https://automationintesting.online/",
+  "tests": [{
+    "id": "754d9462-171a-4256-b6eb-566de9cf1b53",
+    "name": "FORMULARZ KONTAKTOWY - bez podania tematu",
+    "commands": [{
+      "id": "cdc10096-95ae-4f20-a730-8028edf48607",
+      "comment": "",
+      "command": "open",
+      "target": "https://automationintesting.online/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de87dee2-e1dc-4144-8f24-c2a72127baf1",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d38fda7-4f3b-48ce-ad8e-86dc3d194eca",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "James Dean"
+    }, {
+      "id": "c7e9c9c1-d7a6-4b43-b8a6-e2ba2cf7312c",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ad4a701-0dd2-4a92-a1b7-b99c3b114e43",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "james@email.com"
+    }, {
+      "id": "c68ea687-23a3-4196-bb06-9536fdc89287",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b41250b-3866-457e-8451-0c712e5c376d",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "01402 619211"
+    }, {
+      "id": "16e2a468-c9c2-439d-ba50-4d22e9d7f2b7",
+      "comment": "",
+      "command": "click",
+      "target": "id=subject",
+      "targets": [
+        ["id=subject", "id"],
+        ["css=#subject", "css:finder"],
+        ["xpath=//input[@id='subject']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15dcfbe8-2d36-49ad-b4b5-ec57d7354bf0",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[5]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60ff64cd-658f-4f5c-a457-dff08746434c",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[5]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "1 2 3 4 5 6 7 8 9 10 11 22 33 44 "
+    }, {
+      "id": "801755d8-dafb-4e01-b60c-ee2e42b2f033",
+      "comment": "",
+      "command": "if",
+      "target": "id=subject",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1af778f4-93c4-4593-986b-e6746d4e1baf",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitContact",
+      "targets": [
+        ["id=submitContact", "id"],
+        ["css=#submitContact", "css:finder"],
+        ["xpath=//button[@id='submitContact']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f806ba5c-66e6-449d-9ae2-3f0b0e273ffa",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.alert > p:nth-child(2)",
+      "targets": [
+        ["css=.alert > p:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[6]/p[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Subject must be between 5 and 100 characters.')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "f895b526-4b23-4324-873b-c57e12b1d9a5",
+      "comment": "",
+      "command": "click",
+      "target": "id=subject",
+      "targets": [
+        ["id=subject", "id"],
+        ["css=#subject", "css:finder"],
+        ["xpath=//input[@id='subject']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7388a329-47e5-46a2-8491-abf48829ef04",
+      "comment": "",
+      "command": "type",
+      "target": "id=subject",
+      "targets": [
+        ["id=subject", "id"],
+        ["css=#subject", "css:finder"],
+        ["xpath=//input[@id='subject']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "Booking"
+    }, {
+      "id": "0e76e111-09e1-496e-9ef1-0d7949fed6b8",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitContact",
+      "targets": [
+        ["id=submitContact", "id"],
+        ["css=#submitContact", "css:finder"],
+        ["xpath=//button[@id='submitContact']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "273dda50-38fd-46db-a42d-19515c97ec4d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=div:nth-child(1) > p:nth-child(2)",
+      "targets": [
+        ["css=div:nth-child(1) > p:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/div/div[5]/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/div/p", "xpath:position"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "4fdd5661-1e02-4e5a-8af6-18ff66f530f0",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf34f38e-d086-4089-bfaf-f097f6355337",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c94244db-25cf-490f-b480-e76bf44d79b0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://automationintesting.online/"],
+  "plugins": []
+}
